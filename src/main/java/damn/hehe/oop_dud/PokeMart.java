@@ -10,12 +10,12 @@ import java.util.ArrayList;
  *
  * @author excalibur
  */
-public class FrozenDistrict extends javax.swing.JDialog {
+public class PokeMart extends javax.swing.JDialog {
 	static ArrayList<int[]> PickedList = new ArrayList<>();
 	static int productId = 0;
 	static float PickedListSubtotal = 0;
     static ProductItem[] products;
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FrozenDistrict.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(PokeMart.class.getName());
     
 	// My functions block
 	static void showToOrderList () {
@@ -78,25 +78,25 @@ public class FrozenDistrict extends javax.swing.JDialog {
     /**
      * Creates new form TestGUI
      */
-    public FrozenDistrict(java.awt.Frame parent, boolean modal) {
+    public PokeMart(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
         
         products = new ProductItem[] {
             // Ice cream
-            new ProductItem(50f, 0, "Vanilla", product_price_1, product_button_1),
-            new ProductItem(60f, 0, "Chocolate", product_price_2, product_button_2),
-            new ProductItem(65f, 0, "Ube", product_price_3, product_button_3),
+            new ProductItem(50f, 0, "Potion", product_price_1, product_button_1),
+            new ProductItem(60f, 0, "Super Potion", product_price_2, product_button_2),
+            new ProductItem(65f, 0, "Hyper Potion", product_price_3, product_button_3),
             
             // Custards
-            new ProductItem(150f, 0, "Leche Flan", product_price_4, product_button_4),
-            new ProductItem(99f, 0, "Egg Tart", product_price_5, product_button_5),
-            new ProductItem(389f, 0, "Crème Brûlée", product_price_6, product_button_6),
+            new ProductItem(150f, 0, "Poke Ball", product_price_4, product_button_4),
+            new ProductItem(99f, 0, "Great Ball", product_price_5, product_button_5),
+            new ProductItem(389f, 0, "Ultra Ball", product_price_6, product_button_6),
             
             // Processed
-            new ProductItem(48f, 0, "Hotdog", product_price_7, product_button_7),
-            new ProductItem(80f, 0, "Longaniza", product_price_8, product_button_8),
-            new ProductItem(169f, 0, "Sweet Ham", product_price_9, product_button_9),
+            new ProductItem(48f, 0, "Antidote", product_price_7, product_button_7),
+            new ProductItem(80f, 0, "Revive", product_price_8, product_button_8),
+            new ProductItem(169f, 0, "Escape Rope", product_price_9, product_button_9),
         };
 
         for (ProductItem item : products) {
@@ -172,34 +172,34 @@ public class FrozenDistrict extends javax.swing.JDialog {
         ChangeInput = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 255, 204));
 
-        RepresentTitle.setFont(new java.awt.Font("BigBlueTerm437 Nerd Font", 0, 24)); // NOI18N
-        RepresentTitle.setForeground(new java.awt.Color(44, 126, 246));
+        RepresentTitle.setFont(new java.awt.Font("Viner Hand ITC", 1, 48)); // NOI18N
+        RepresentTitle.setForeground(new java.awt.Color(255, 0, 51));
         RepresentTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RepresentTitle.setText("Frozen District");
+        RepresentTitle.setText("POKEMART");
 
         rowSeparator1.setBackground(new java.awt.Color(73, 152, 199));
-        rowSeparator1.setForeground(new java.awt.Color(73, 152, 199));
+        rowSeparator1.setForeground(new java.awt.Color(102, 255, 102));
 
         rowLabel1.setFont(new java.awt.Font("BigBlueTerm437 Nerd Font", 0, 14)); // NOI18N
-        rowLabel1.setForeground(new java.awt.Color(44, 126, 246));
-        rowLabel1.setText("Ice Cream");
+        rowLabel1.setForeground(new java.awt.Color(0, 255, 102));
+        rowLabel1.setText("Potions");
 
-        product_button_1.setBackground(new java.awt.Color(218, 233, 250));
-        product_button_1.setFont(new java.awt.Font("BigBlueTerm437 Nerd Font", 0, 10)); // NOI18N
-        product_button_1.setForeground(new java.awt.Color(44, 126, 246));
-        product_button_1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ice_cream/ice_cream1.png"))); // NOI18N
-        product_button_1.setText("Vanilla");
+        product_button_1.setFont(new java.awt.Font("BigBlueTerm437 Nerd Font", 0, 12)); // NOI18N
+        product_button_1.setForeground(new java.awt.Color(153, 153, 255));
+        product_button_1.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Downloads\\Screenshot 2026-11-05 214924.png")); // NOI18N
+        product_button_1.setText("Potion");
         product_button_1.setToolTipText("");
-        product_button_1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(73, 152, 199), 3, true));
+        product_button_1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 102, 255), 3, true));
         product_button_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         product_button_1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         product_button_1.addActionListener(this::product_button_1ActionPerformed);
 
         product_price_1.setFont(new java.awt.Font("Adwaita Sans", 1, 16)); // NOI18N
-        product_price_1.setForeground(new java.awt.Color(73, 152, 199));
+        product_price_1.setForeground(new java.awt.Color(0, 153, 0));
         product_price_1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        product_price_1.setText("Price 0");
+        product_price_1.setText("Price 200");
         product_price_1.setToolTipText("");
 
         javax.swing.GroupLayout Product1Layout = new javax.swing.GroupLayout(Product1);
@@ -210,38 +210,38 @@ public class FrozenDistrict extends javax.swing.JDialog {
             .addGroup(Product1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(Product1Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addGroup(Product1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(product_button_1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
-                        .addComponent(product_price_1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(Product1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(product_price_1, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
+                        .addComponent(product_button_1, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE))
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         Product1Layout.setVerticalGroup(
             Product1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 164, Short.MAX_VALUE)
+            .addGap(0, 168, Short.MAX_VALUE)
             .addGroup(Product1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(Product1Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(product_button_1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(product_button_1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(product_price_1)
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
-        product_button_2.setBackground(new java.awt.Color(218, 233, 250));
-        product_button_2.setFont(new java.awt.Font("BigBlueTerm437 Nerd Font", 0, 10)); // NOI18N
-        product_button_2.setForeground(new java.awt.Color(44, 126, 246));
-        product_button_2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ice_cream/ice_cream2.png"))); // NOI18N
-        product_button_2.setText("Chocolate");
+        product_button_2.setBackground(new java.awt.Color(255, 0, 51));
+        product_button_2.setFont(new java.awt.Font("BigBlueTerm437 Nerd Font", 0, 12)); // NOI18N
+        product_button_2.setForeground(new java.awt.Color(255, 255, 255));
+        product_button_2.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Downloads\\superpotion (1).png")); // NOI18N
+        product_button_2.setText("Super Potion");
         product_button_2.setToolTipText("");
-        product_button_2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(73, 152, 199), 3, true));
+        product_button_2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 0, 0), 3, true));
         product_button_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         product_button_2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         product_button_2.addActionListener(this::product_button_2ActionPerformed);
 
         product_price_2.setFont(new java.awt.Font("Adwaita Sans", 1, 16)); // NOI18N
-        product_price_2.setForeground(new java.awt.Color(73, 152, 199));
+        product_price_2.setForeground(new java.awt.Color(0, 153, 0));
         product_price_2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        product_price_2.setText("Price 0");
+        product_price_2.setText("Price 700 ");
         product_price_2.setToolTipText("");
 
         javax.swing.GroupLayout Product2Layout = new javax.swing.GroupLayout(Product2);
@@ -259,30 +259,30 @@ public class FrozenDistrict extends javax.swing.JDialog {
         );
         Product2Layout.setVerticalGroup(
             Product2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 164, Short.MAX_VALUE)
+            .addGap(0, 168, Short.MAX_VALUE)
             .addGroup(Product2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(Product2Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(product_button_2, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(product_button_2)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(product_price_2)
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
-        product_button_3.setBackground(new java.awt.Color(218, 233, 250));
-        product_button_3.setFont(new java.awt.Font("BigBlueTerm437 Nerd Font", 0, 10)); // NOI18N
-        product_button_3.setForeground(new java.awt.Color(44, 126, 246));
-        product_button_3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ice_cream/ice_cream3.png"))); // NOI18N
-        product_button_3.setText("Ube");
+        product_button_3.setBackground(new java.awt.Color(255, 102, 255));
+        product_button_3.setFont(new java.awt.Font("BigBlueTerm437 Nerd Font", 0, 12)); // NOI18N
+        product_button_3.setForeground(new java.awt.Color(255, 0, 153));
+        product_button_3.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Downloads\\hyperpotion (1).png")); // NOI18N
+        product_button_3.setText("Hyper Potion");
         product_button_3.setToolTipText("");
-        product_button_3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(73, 152, 199), 3, true));
+        product_button_3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 0, 102), 3, true));
         product_button_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         product_button_3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         product_price_3.setFont(new java.awt.Font("Adwaita Sans", 1, 16)); // NOI18N
-        product_price_3.setForeground(new java.awt.Color(73, 152, 199));
+        product_price_3.setForeground(new java.awt.Color(0, 153, 0));
         product_price_3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        product_price_3.setText("Price 0");
+        product_price_3.setText("Price 1200");
         product_price_3.setToolTipText("");
 
         javax.swing.GroupLayout Product3Layout = new javax.swing.GroupLayout(Product3);
@@ -300,11 +300,11 @@ public class FrozenDistrict extends javax.swing.JDialog {
         );
         Product3Layout.setVerticalGroup(
             Product3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 164, Short.MAX_VALUE)
+            .addGap(0, 168, Short.MAX_VALUE)
             .addGroup(Product3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(Product3Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(product_button_3, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(product_button_3)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(product_price_3)
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -333,7 +333,7 @@ public class FrozenDistrict extends javax.swing.JDialog {
         );
         ItemRow1Layout.setVerticalGroup(
             ItemRow1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
+            .addGap(0, 213, Short.MAX_VALUE)
             .addGroup(ItemRow1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(ItemRow1Layout.createSequentialGroup()
                     .addContainerGap()
@@ -349,27 +349,27 @@ public class FrozenDistrict extends javax.swing.JDialog {
         );
 
         rowSeparator2.setBackground(new java.awt.Color(73, 152, 199));
-        rowSeparator2.setForeground(new java.awt.Color(73, 152, 199));
+        rowSeparator2.setForeground(new java.awt.Color(204, 0, 0));
 
         rowLabel2.setFont(new java.awt.Font("BigBlueTerm437 Nerd Font", 0, 14)); // NOI18N
-        rowLabel2.setForeground(new java.awt.Color(44, 126, 246));
-        rowLabel2.setText("Custards");
+        rowLabel2.setForeground(new java.awt.Color(204, 0, 0));
+        rowLabel2.setText("Pokeballs");
 
-        product_button_4.setBackground(new java.awt.Color(218, 233, 250));
-        product_button_4.setFont(new java.awt.Font("BigBlueTerm437 Nerd Font", 0, 10)); // NOI18N
-        product_button_4.setForeground(new java.awt.Color(44, 126, 246));
-        product_button_4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/custard/custard1.png"))); // NOI18N
-        product_button_4.setText("Leche Flan");
+        product_button_4.setBackground(new java.awt.Color(204, 0, 51));
+        product_button_4.setFont(new java.awt.Font("BigBlueTerm437 Nerd Font", 0, 12)); // NOI18N
+        product_button_4.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Downloads\\Screenshot 2026-11-05 215600-Photoroom.png")); // NOI18N
+        product_button_4.setText("Poké Ball");
         product_button_4.setToolTipText("");
-        product_button_4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(73, 152, 199), 3, true));
+        product_button_4.setActionCommand("Poké Ball");
+        product_button_4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         product_button_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         product_button_4.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         product_button_4.addActionListener(this::product_button_4ActionPerformed);
 
         product_price_4.setFont(new java.awt.Font("Adwaita Sans", 1, 16)); // NOI18N
-        product_price_4.setForeground(new java.awt.Color(73, 152, 199));
+        product_price_4.setForeground(new java.awt.Color(0, 153, 0));
         product_price_4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        product_price_4.setText("Price 0");
+        product_price_4.setText("Price 200");
         product_price_4.setToolTipText("");
 
         javax.swing.GroupLayout Product4Layout = new javax.swing.GroupLayout(Product4);
@@ -387,30 +387,30 @@ public class FrozenDistrict extends javax.swing.JDialog {
         );
         Product4Layout.setVerticalGroup(
             Product4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 164, Short.MAX_VALUE)
+            .addGap(0, 168, Short.MAX_VALUE)
             .addGroup(Product4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(Product4Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(product_button_4, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(product_button_4)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(product_price_4)
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         product_button_5.setBackground(new java.awt.Color(218, 233, 250));
-        product_button_5.setFont(new java.awt.Font("BigBlueTerm437 Nerd Font", 0, 10)); // NOI18N
+        product_button_5.setFont(new java.awt.Font("BigBlueTerm437 Nerd Font", 0, 12)); // NOI18N
         product_button_5.setForeground(new java.awt.Color(44, 126, 246));
-        product_button_5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/custard/custard2.png"))); // NOI18N
-        product_button_5.setText("Egg Tart");
+        product_button_5.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Downloads\\Screenshot 2026-11-05 215610-Photoroom.png")); // NOI18N
+        product_button_5.setText("Great Ball");
         product_button_5.setToolTipText("");
         product_button_5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(73, 152, 199), 3, true));
         product_button_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         product_button_5.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         product_price_5.setFont(new java.awt.Font("Adwaita Sans", 1, 16)); // NOI18N
-        product_price_5.setForeground(new java.awt.Color(73, 152, 199));
+        product_price_5.setForeground(new java.awt.Color(0, 153, 0));
         product_price_5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        product_price_5.setText("Price 0");
+        product_price_5.setText("Price 600");
         product_price_5.setToolTipText("");
 
         javax.swing.GroupLayout Product5Layout = new javax.swing.GroupLayout(Product5);
@@ -428,31 +428,31 @@ public class FrozenDistrict extends javax.swing.JDialog {
         );
         Product5Layout.setVerticalGroup(
             Product5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 164, Short.MAX_VALUE)
+            .addGap(0, 168, Short.MAX_VALUE)
             .addGroup(Product5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(Product5Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(product_button_5, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(product_button_5)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(product_price_5)
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
-        product_button_6.setBackground(new java.awt.Color(218, 233, 250));
-        product_button_6.setFont(new java.awt.Font("BigBlueTerm437 Nerd Font", 0, 10)); // NOI18N
-        product_button_6.setForeground(new java.awt.Color(44, 126, 246));
-        product_button_6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/custard/custard3.png"))); // NOI18N
-        product_button_6.setText("Crème Brûlée");
+        product_button_6.setBackground(new java.awt.Color(51, 51, 51));
+        product_button_6.setFont(new java.awt.Font("BigBlueTerm437 Nerd Font", 0, 12)); // NOI18N
+        product_button_6.setForeground(new java.awt.Color(204, 204, 0));
+        product_button_6.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Downloads\\Screenshot 2026-11-05 215624-Photoroom.png")); // NOI18N
+        product_button_6.setText("Ultra Ball");
         product_button_6.setToolTipText("");
-        product_button_6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(73, 152, 199), 3, true));
+        product_button_6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 0), 3, true));
         product_button_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         product_button_6.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         product_button_6.addActionListener(this::product_button_6ActionPerformed);
 
         product_price_6.setFont(new java.awt.Font("Adwaita Sans", 1, 16)); // NOI18N
-        product_price_6.setForeground(new java.awt.Color(73, 152, 199));
+        product_price_6.setForeground(new java.awt.Color(0, 153, 0));
         product_price_6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        product_price_6.setText("Price 0");
+        product_price_6.setText("Price 1200");
         product_price_6.setToolTipText("");
 
         javax.swing.GroupLayout Product6Layout = new javax.swing.GroupLayout(Product6);
@@ -470,11 +470,11 @@ public class FrozenDistrict extends javax.swing.JDialog {
         );
         Product6Layout.setVerticalGroup(
             Product6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 164, Short.MAX_VALUE)
+            .addGap(0, 168, Short.MAX_VALUE)
             .addGroup(Product6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(Product6Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(product_button_6, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(product_button_6)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(product_price_6)
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -503,7 +503,7 @@ public class FrozenDistrict extends javax.swing.JDialog {
         );
         ItemRow2Layout.setVerticalGroup(
             ItemRow2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
+            .addGap(0, 212, Short.MAX_VALUE)
             .addGroup(ItemRow2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(ItemRow2Layout.createSequentialGroup()
                     .addContainerGap()
@@ -519,27 +519,26 @@ public class FrozenDistrict extends javax.swing.JDialog {
         );
 
         rowSeparator3.setBackground(new java.awt.Color(73, 152, 199));
-        rowSeparator3.setForeground(new java.awt.Color(73, 152, 199));
+        rowSeparator3.setForeground(new java.awt.Color(51, 51, 0));
 
         rowLabel3.setFont(new java.awt.Font("BigBlueTerm437 Nerd Font", 0, 14)); // NOI18N
-        rowLabel3.setForeground(new java.awt.Color(44, 126, 246));
-        rowLabel3.setText("Processed");
+        rowLabel3.setForeground(new java.awt.Color(51, 51, 0));
+        rowLabel3.setText("Misc.");
 
-        product_button_7.setBackground(new java.awt.Color(218, 233, 250));
-        product_button_7.setFont(new java.awt.Font("BigBlueTerm437 Nerd Font", 0, 10)); // NOI18N
-        product_button_7.setForeground(new java.awt.Color(44, 126, 246));
-        product_button_7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/processed/processed1.png"))); // NOI18N
-        product_button_7.setText("Hotdog");
+        product_button_7.setBackground(new java.awt.Color(255, 255, 153));
+        product_button_7.setFont(new java.awt.Font("BigBlueTerm437 Nerd Font", 0, 12)); // NOI18N
+        product_button_7.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Downloads\\Dream_Antidote_Sprite (1).png")); // NOI18N
+        product_button_7.setText("Antidote");
         product_button_7.setToolTipText("");
-        product_button_7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(73, 152, 199), 3, true));
+        product_button_7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         product_button_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         product_button_7.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         product_button_7.addActionListener(this::product_button_7ActionPerformed);
 
         product_price_7.setFont(new java.awt.Font("Adwaita Sans", 1, 16)); // NOI18N
-        product_price_7.setForeground(new java.awt.Color(73, 152, 199));
+        product_price_7.setForeground(new java.awt.Color(0, 153, 0));
         product_price_7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        product_price_7.setText("Price 0");
+        product_price_7.setText("Price 100");
         product_price_7.setToolTipText("");
 
         javax.swing.GroupLayout Product7Layout = new javax.swing.GroupLayout(Product7);
@@ -557,30 +556,30 @@ public class FrozenDistrict extends javax.swing.JDialog {
         );
         Product7Layout.setVerticalGroup(
             Product7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 164, Short.MAX_VALUE)
+            .addGap(0, 168, Short.MAX_VALUE)
             .addGroup(Product7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(Product7Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(product_button_7, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(product_button_7)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(product_price_7)
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
-        product_button_8.setBackground(new java.awt.Color(218, 233, 250));
-        product_button_8.setFont(new java.awt.Font("BigBlueTerm437 Nerd Font", 0, 10)); // NOI18N
-        product_button_8.setForeground(new java.awt.Color(44, 126, 246));
-        product_button_8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/processed/processed2.png"))); // NOI18N
-        product_button_8.setText("Longaniza");
+        product_button_8.setFont(new java.awt.Font("BigBlueTerm437 Nerd Font", 0, 12)); // NOI18N
+        product_button_8.setForeground(new java.awt.Color(204, 204, 0));
+        product_button_8.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Downloads\\images (1).png")); // NOI18N
+        product_button_8.setText("Revive");
         product_button_8.setToolTipText("");
-        product_button_8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(73, 152, 199), 3, true));
+        product_button_8.setActionCommand("Revive");
+        product_button_8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 102), 3, true));
         product_button_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         product_button_8.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         product_price_8.setFont(new java.awt.Font("Adwaita Sans", 1, 16)); // NOI18N
-        product_price_8.setForeground(new java.awt.Color(73, 152, 199));
+        product_price_8.setForeground(new java.awt.Color(0, 153, 0));
         product_price_8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        product_price_8.setText("Price 0");
+        product_price_8.setText("Price 1500");
         product_price_8.setToolTipText("");
 
         javax.swing.GroupLayout Product8Layout = new javax.swing.GroupLayout(Product8);
@@ -598,30 +597,30 @@ public class FrozenDistrict extends javax.swing.JDialog {
         );
         Product8Layout.setVerticalGroup(
             Product8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 164, Short.MAX_VALUE)
+            .addGap(0, 168, Short.MAX_VALUE)
             .addGroup(Product8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(Product8Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(product_button_8, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(product_button_8)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(product_price_8)
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
-        product_button_9.setBackground(new java.awt.Color(218, 233, 250));
-        product_button_9.setFont(new java.awt.Font("BigBlueTerm437 Nerd Font", 0, 10)); // NOI18N
-        product_button_9.setForeground(new java.awt.Color(44, 126, 246));
-        product_button_9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/processed/processed3.png"))); // NOI18N
-        product_button_9.setText("Sweet Ham");
+        product_button_9.setBackground(new java.awt.Color(51, 51, 0));
+        product_button_9.setFont(new java.awt.Font("BigBlueTerm437 Nerd Font", 0, 12)); // NOI18N
+        product_button_9.setForeground(new java.awt.Color(153, 153, 0));
+        product_button_9.setIcon(new javax.swing.ImageIcon("C:\\Users\\admin\\Downloads\\item_0078 (1).png")); // NOI18N
+        product_button_9.setText("Escape Rope");
         product_button_9.setToolTipText("");
-        product_button_9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(73, 152, 199), 3, true));
+        product_button_9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 51, 51), 3, true));
         product_button_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         product_button_9.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         product_price_9.setFont(new java.awt.Font("Adwaita Sans", 1, 16)); // NOI18N
-        product_price_9.setForeground(new java.awt.Color(73, 152, 199));
+        product_price_9.setForeground(new java.awt.Color(0, 153, 0));
         product_price_9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        product_price_9.setText("Price 0");
+        product_price_9.setText("Price 550");
         product_price_9.setToolTipText("");
 
         javax.swing.GroupLayout Product9Layout = new javax.swing.GroupLayout(Product9);
@@ -639,11 +638,11 @@ public class FrozenDistrict extends javax.swing.JDialog {
         );
         Product9Layout.setVerticalGroup(
             Product9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 164, Short.MAX_VALUE)
+            .addGap(0, 168, Short.MAX_VALUE)
             .addGroup(Product9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(Product9Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(product_button_9, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(product_button_9)
                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                     .addComponent(product_price_9)
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -672,7 +671,7 @@ public class FrozenDistrict extends javax.swing.JDialog {
         );
         ItemRow3Layout.setVerticalGroup(
             ItemRow3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
+            .addGap(0, 212, Short.MAX_VALUE)
             .addGroup(ItemRow3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(ItemRow3Layout.createSequentialGroup()
                     .addContainerGap()
@@ -690,7 +689,7 @@ public class FrozenDistrict extends javax.swing.JDialog {
         CashierMenu.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(44, 126, 246), 2));
 
         orderListTextArea.setEditable(false);
-        orderListTextArea.setBackground(new java.awt.Color(218, 233, 250));
+        orderListTextArea.setBackground(new java.awt.Color(153, 255, 153));
         orderListTextArea.setColumns(20);
         orderListTextArea.setFont(new java.awt.Font("Adwaita Mono", 0, 12)); // NOI18N
         orderListTextArea.setForeground(new java.awt.Color(44, 126, 246));
@@ -699,31 +698,29 @@ public class FrozenDistrict extends javax.swing.JDialog {
         orderListTextArea.setMargin(new java.awt.Insets(7, 7, 7, 6));
         jScrollPane1.setViewportView(orderListTextArea);
 
-        NextButton.setBackground(new java.awt.Color(218, 233, 250));
-        NextButton.setFont(new java.awt.Font("BigBlueTerm437 Nerd Font", 0, 13)); // NOI18N
+        NextButton.setBackground(new java.awt.Color(204, 204, 0));
+        NextButton.setFont(new java.awt.Font("BigBlueTerm437 Nerd Font", 1, 13)); // NOI18N
         NextButton.setForeground(new java.awt.Color(44, 126, 246));
-        NextButton.setText("Next");
+        NextButton.setText("NEXT");
         NextButton.setEnabled(false);
         NextButton.addActionListener(this::NextButtonActionPerformed);
 
-        OkButton.setBackground(new java.awt.Color(218, 233, 250));
-        OkButton.setFont(new java.awt.Font("BigBlueTerm437 Nerd Font", 0, 13)); // NOI18N
-        OkButton.setForeground(new java.awt.Color(44, 126, 246));
-        OkButton.setText("Ok");
+        OkButton.setBackground(new java.awt.Color(0, 153, 51));
+        OkButton.setFont(new java.awt.Font("BigBlueTerm437 Nerd Font", 1, 13)); // NOI18N
+        OkButton.setText("OK");
         OkButton.addActionListener(this::OkButtonActionPerformed);
 
-        SalesInventoryButton.setBackground(new java.awt.Color(218, 233, 250));
-        SalesInventoryButton.setFont(new java.awt.Font("BigBlueTerm437 Nerd Font", 0, 13)); // NOI18N
-        SalesInventoryButton.setForeground(new java.awt.Color(44, 126, 246));
-        SalesInventoryButton.setText("Sales Inventory");
+        SalesInventoryButton.setBackground(new java.awt.Color(51, 51, 0));
+        SalesInventoryButton.setFont(new java.awt.Font("BigBlueTerm437 Nerd Font", 1, 13)); // NOI18N
+        SalesInventoryButton.setForeground(new java.awt.Color(255, 255, 255));
+        SalesInventoryButton.setText("SALES INVENTORY");
         SalesInventoryButton.addActionListener(this::SalesInventoryButtonActionPerformed);
 
         InputLabel1.setFont(new java.awt.Font("BigBlueTerm437 Nerd Font", 1, 18)); // NOI18N
-        InputLabel1.setForeground(new java.awt.Color(44, 126, 246));
         InputLabel1.setText("Total");
 
         TotalInput.setEditable(false);
-        TotalInput.setBackground(new java.awt.Color(218, 233, 250));
+        TotalInput.setBackground(new java.awt.Color(153, 255, 153));
         TotalInput.setFont(new java.awt.Font("Adwaita Sans", 0, 13)); // NOI18N
         TotalInput.setText("0.00");
         TotalInput.addActionListener(this::TotalInputActionPerformed);
@@ -749,10 +746,10 @@ public class FrozenDistrict extends javax.swing.JDialog {
         );
 
         InputLabel2.setFont(new java.awt.Font("BigBlueTerm437 Nerd Font", 1, 18)); // NOI18N
-        InputLabel2.setForeground(new java.awt.Color(44, 126, 246));
+        InputLabel2.setForeground(new java.awt.Color(153, 0, 0));
         InputLabel2.setText("Cash");
 
-        CashInput.setBackground(new java.awt.Color(218, 233, 250));
+        CashInput.setBackground(new java.awt.Color(153, 255, 153));
         CashInput.setFont(new java.awt.Font("Adwaita Sans", 0, 13)); // NOI18N
         CashInput.setText("0.00");
         CashInput.addActionListener(this::CashInputActionPerformed);
@@ -778,11 +775,11 @@ public class FrozenDistrict extends javax.swing.JDialog {
         );
 
         InputLabel3.setFont(new java.awt.Font("BigBlueTerm437 Nerd Font", 1, 18)); // NOI18N
-        InputLabel3.setForeground(new java.awt.Color(44, 126, 246));
+        InputLabel3.setForeground(new java.awt.Color(0, 153, 0));
         InputLabel3.setText("Change");
 
         ChangeInput.setEditable(false);
-        ChangeInput.setBackground(new java.awt.Color(218, 233, 250));
+        ChangeInput.setBackground(new java.awt.Color(153, 255, 153));
         ChangeInput.setFont(new java.awt.Font("Adwaita Sans", 0, 13)); // NOI18N
         ChangeInput.setText("0.00");
         ChangeInput.addActionListener(this::ChangeInputActionPerformed);
@@ -829,8 +826,8 @@ public class FrozenDistrict extends javax.swing.JDialog {
             CashierMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(CashierMenuLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(InputPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(InputPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -984,7 +981,7 @@ public class FrozenDistrict extends javax.swing.JDialog {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                FrozenDistrict dialog = new FrozenDistrict(new javax.swing.JFrame(), true);
+                PokeMart dialog = new PokeMart(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
@@ -1056,7 +1053,7 @@ public class FrozenDistrict extends javax.swing.JDialog {
 class ProductItem {
     float Price;
     int Quantity = 0;
-	int id = FrozenDistrict.productId++;
+	int id = PokeMart.productId++;
     String Name;
     javax.swing.JLabel PriceLabel;
     javax.swing.JButton ProductButton;
@@ -1088,8 +1085,8 @@ class ProductItem {
 				this.getTextPrice() + " * " + Quantity);
 
 		PriceLabel.setText(result);
-		FrozenDistrict.updatePickedList();
-		FrozenDistrict.refreshPickedListSubtotal();
+		PokeMart.updatePickedList();
+		PokeMart.refreshPickedListSubtotal();
 	}
 
     void productAction () {
@@ -1110,7 +1107,7 @@ class ProductItem {
 
 class DebugFunctions {
 	static void printPickedList () {
-		for (int[] value : FrozenDistrict.PickedList) {
+		for (int[] value : PokeMart.PickedList) {
 			int itemId = value[0];
 			int itemQuantity = value[1];
 
